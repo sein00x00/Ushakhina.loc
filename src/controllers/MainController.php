@@ -4,7 +4,9 @@ namespace Src\Controllers;
 
 use src\views\View;
 
-class MainController
+use src\services\Db;
+
+class MainController extends Controller
 {
     public $view;
     public $layout = 'default';
@@ -15,10 +17,7 @@ class MainController
     }
 
 
-    public function main()
-    {
-        $this->view->renderHtml('main/main.php');
-    }
+
 
     public function sayHello($name)
     {
